@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Product CRUD</title>
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
+
 <body>
   <h1>Product CRUD</h1>
 
@@ -16,6 +18,17 @@
     <button type="submit">Add</button>
   </form>
 
+  <!-- Update Product Form -->
+  <form id="update-product-form" style="display:none;">
+    <h2>Update Product</h2>
+    <input type="hidden" id="update-id">
+    <label for="update-name">Name:</label>
+    <input type="text" id="update-name" name="name" required>
+    <label for="update-price">Price:</label>
+    <input type="number" id="update-price" name="price" required step="0.01">
+    <button type="submit">Update</button>
+  </form>
+
   <ul id="products"></ul>
 
   <script src="app.js"></script>
@@ -24,4 +37,5 @@
     window.addEventListener('load', fetchProducts);
   </script>
 </body>
+
 </html>
